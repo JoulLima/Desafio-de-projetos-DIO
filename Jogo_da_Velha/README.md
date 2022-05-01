@@ -1,3 +1,3 @@
-# Jogo da Velha com o tema do Super Mario
+# JOGO DA VELHA COM O TEMA DO SUPER MARIO
 
 ![](JogoGif.gif)
