@@ -6,12 +6,22 @@ var vencedorSelecionado = document.getElementById('vencedor-selecionado');
 var quadrados = document.getElementsByClassName('quadrado');
 var mario = '<img src="assets/images/Mariocabeca.png" class= "personagem";>';
 var luigi = '<img src="assets/images/Luigicabeca.png" class= "personagem";>';
+var audio1 = new Audio("assets/sound/sommario.mp3")
+var audioVitoria = new Audio("assets/sound/somvitoria.mp3")
+var audioReiniciar = new Audio("assets/sound/somreiniciar.mp3")
+
+
+
+
+
 
 
 mudarJogador(mario);    
 
+
 function escolherQuadrado(id){
 
+            
     if(vencedor !== null){
         return
     }
@@ -24,12 +34,19 @@ function escolherQuadrado(id){
     quadrado.innerHTML = jogador
     quadrado.style.color = '#FFFFFF';
     quadrado.style.backgroundImage = "URL('assets/images/bloco aberto.png')" 
+    
         
 
     if (jogador === mario){
         jogador = luigi;
+        audio1.play();
+       
+        
     }else{
         jogador = mario;
+        audio1.play();
+  
+        
     }
     mudarJogador(jogador);
     checaVencedor();
@@ -105,6 +122,7 @@ function checaVencedor (){
 function mudarVencedor(quadrado){
     vencedor= quadrado.innerHTML;
     vencedorSelecionado.innerHTML = vencedor;
+    
 
 }
 
@@ -115,12 +133,14 @@ function mudarCorQuadrado(quadrado1, quadrado2, quadrado3) {
     quadrado2.style.backgroundSize = "contain"
     quadrado3.style.background  = "URL('assets/images/bloco-verde.png')";;
     quadrado3.style.backgroundSize = "contain"
+    audioVitoria.play();
 }
     
 
 
 function checaSequencia(quadrado1, quadrado2,quadrado3){
     var eigual= false;
+    
 
     if(quadrado1.innerHTML !== '-' && quadrado1.innerHTML === quadrado2.innerHTML && quadrado2.innerHTML === quadrado3.innerHTML){
         eigual= true;
@@ -140,6 +160,8 @@ function reiniciar(){
         quadrado.style.color = 'transparent';
         quadrado.style.backgroundImage = "URL('assets/images/box.png')" 
         quadrado.style.backgroundSize = 'contain'
+        audioVitoria.pause()
+        audioReiniciar.play()
     mudarJogador(mario);
     }
 }
