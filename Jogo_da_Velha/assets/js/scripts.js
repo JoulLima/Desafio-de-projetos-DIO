@@ -4,8 +4,8 @@ var jogador, vencedor = null
 var jogadorSelecionado = document.getElementById('jogador-selecionado');
 var vencedorSelecionado = document.getElementById('vencedor-selecionado');
 var quadrados = document.getElementsByClassName('quadrado');
-var mario = '<img src="assets/images/mariocabeca.png" class= "personagem";>';
-var luigi = '<img src="assets/images/luigicabeca.png" class= "personagem";>';
+var mario = '<img src="assets/images/Mariocabeca.png" class= "personagem";>';
+var luigi = '<img src="assets/images/Luigicabeca.png" class= "personagem";>';
 
 
 mudarJogador(mario);    

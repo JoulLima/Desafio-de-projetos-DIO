@@ -65,7 +65,10 @@ h1{
     text-align: center;
     height: 60px;
     
+    
 }
+
+
 .jogador, .vencedor {
     font-size: 80px;
     margin-top: 10px;
