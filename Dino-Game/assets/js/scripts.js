@@ -3,6 +3,10 @@ const background = document.querySelector('.background');
 let isJumping = false; //informar que o personagem esta pulando
 let position = 0;
 let isGameOver = false;
+var sonicRoll = document.querySelector('.sonicRoll');
+const startButton = document.querySelector('.start-button');
+
+
 
 function    handlekeyUp(event){
     if (event.keyCode === 32) {
@@ -12,8 +16,10 @@ function    handlekeyUp(event){
     }
 }
 
+
 function jump(){
-    
+
+
     isJumping = true;
 
     let upInterval = setInterval(() => {
@@ -26,7 +32,10 @@ function jump(){
               clearInterval(downInterval);
               isJumping = false;
             } else{
+            
             position -= 20;
+            sonicRoll.classList.remove('sonicRoll')
+            sonic.classList.add('sonic');
            sonic.style.bottom = position + 'px';
             }
         }, 20);
@@ -34,7 +43,10 @@ function jump(){
        
         //subindo
         position += 20;
+        sonicRoll.classList.add('sonicRoll')
+        sonic.classList.remove('sonic');
         sonic.style.bottom = position + 'px';
+        sonicRoll.style.bottom = position + 'px';
        }
     }, 20);
 }
@@ -60,7 +72,10 @@ function createinimigos(){
             //game over
 
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>';
+            alert('Game Over!');
+            gameOver();
+            
+	        
             isGameOver = true
         } else{
         inimigosPosition -= 10;
@@ -72,6 +87,26 @@ function createinimigos(){
 
 }
 
+function gameOver(){
+    startButton.style.display = 'block';
+    let inimigos= document.querySelectorAll('.inimigos');
+    inimigos.forEach((inimigos) => inimigos.remove());
+    clearInterval(leftInterval);
+    
+    
+    
+}
 
-createinimigos();
+startButton.addEventListener('click', (event) => {
+    
+
+startButton.style.display = 'none';
 document.addEventListener('keyup', handlekeyUp);
+createinimigos();
+    
+}
+
+)
+sonicRoll.classList.remove('sonicRoll')
+
+

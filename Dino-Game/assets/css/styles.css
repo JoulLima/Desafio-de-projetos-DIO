@@ -14,12 +14,24 @@ body{
     left: 50px;
 }
 
+.sonicRoll {
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/sonicRoll.gif);
+    background-size: contain;
+    position: absolute;
+    bottom: 110px;
+    left: 50px;
+    
+}
+
 .inimigos {
     position: absolute;
     width: 60px;
     height: 60px;
     bottom: 110px;
-    background-image: url(../images/cactus.png);
+    background-image: url(../images/carangueijo1.gif);
+    background-size: contain;
 }
 
 .game-over{
@@ -27,6 +39,16 @@ body{
     color: #666666;
     margin-top: 50px 0;
     font-family: Arial;
+}
+
+.start-button {
+    position: relative;
+    color: black;
+    top: 9rem;
+    
+    cursor: pointer;
+    text-align: center;
+     
 }
 
 @keyframes sliderleft{
