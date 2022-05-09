@@ -2,26 +2,37 @@
 
 <html lang="pt-br">
     <head>
+        <style>
+            @font-face {
+                font-family: pixels ;
+                src: url(assets/fonts/Pixels.ttf) format('truetype');
+            }
+        </style>
+        <link rel="icon" href="assets/images/icone.png">
     <meta charset="UTF-8">
-    <title>Dino Game</title>
+    <title>Sonic Game</title>
     <link rel="stylesheet" href="assets/css/styles.css"></link>
     <script src="assets/js/scripts.js" charset="UTF-8" defer></script>
 </head>
 <body>
 
-    <div class="background">
+    <div class="background" onclick="start()">
         <div class="sonic">
         </div>
         <div class="sonicRoll">
         </div>
         <div class="start-button">
-            <h1>START</h1>
+            <img src="assets/images/pressstart.gif" class="imagem">
         </div>
+        
+        
         
     </div>
 
-
+    <h2 class="placar"></h2>
 </body>
-<img 
+<audio src="assets/sound/jump.mp3" preload="auto" id="somJump"></audio>
+<audio src="assets/sound/musicatema.mp3" preload="auto" id="somFundo"></audio>
+<audio src="assets/sound/death.mp3" preload="auto" id="somMorte"></audio>
 
 </html>
