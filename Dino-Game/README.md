@@ -1,3 +1,3 @@
-# JOGO DA VELHA COM O TEMA DO SUPER MARIO
+# JOGO DINO COM TEMA DO SONIC
 
-![](JogoGif.gif)
+![](https://github.com/JoulLima/Desafio-de-projetos-DIO/blob/main/Dino-Game/Sonic%20Game%20GIF.gif)
